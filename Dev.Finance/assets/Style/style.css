@@ -61,18 +61,18 @@ button:hover{
     margin-bottom               : .8rem ;
 }
 .button.cancel{
-    color                     : var(--red);
-    border: 2px var(--red) solid;
-    border-radius: 0.25rem;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0.6;
+    color                       : var(--red);
+    border                      : 2px var(--red) solid;
+    border-radius               : 0.25rem;
+    height                      : 50px;
+    display                     : flex;
+    align-items                 : center;
+    justify-content             : center;
+    opacity                     : 0.6;
 
 }
 .button.cancel:hover{
-    opacity: 1;
+    opacity                     : 1;
 }
 /*Titles ==============================*/
 h2 {
@@ -177,7 +177,7 @@ td.income {
     color                       : #12A454;
 }
 td.expense{
-    color                       :var(--red);
+    color                       : var(--red);
 }
 
 /*Modal ==============================*/
@@ -195,8 +195,8 @@ td.expense{
 
 }
 .modal-overlay.active{
-    opacity : 1;
-    visibility : visible; 
+    opacity                     : 1;
+    visibility                  : visible;
 
 }
 
