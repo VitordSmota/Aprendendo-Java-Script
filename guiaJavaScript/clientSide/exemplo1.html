@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="library.js"></script><!-- inclui uma biblioteca de código JavaScript   -->
+</head>
+
+<body>
+<button onclick="debug()">debug</button>
+<button onclick="moveon()" style="background-color: rebeccapurple;">Moveon</button>
+
+    <p>This is a paragraph of HTML</p>
+    <script>
+        function moveon() {
+            // Exibe uma caixa de diálogo para fazer uma pergunta ao usuário
+            var answer = confirm("Ready to move on?");
+            // Se ele clicou no botão "OK", faz o navegador carregar uma nova página
+            if (answer) { window.location = "https://www.google.com" };
+            // Executa a funcção definida acima por 1 minuto (60.000 milisegundos) a partir de agora 
+            setTimeout(moveon, 60000);
+        }
+// E este é um código JavaScript do lado do cliente
+// literalmente incoporado no arquivo HTML 
+
+
+        
+    </script>
+    <p> Here is more </p>
+</body>
+
+</html>
