@@ -1,4 +1,4 @@
-![2022-02-23_11h55_38](https://user-images.githubusercontent.com/86672122/155344426-3c7bbe09-42b6-4ed1-b4c6-bd2c2d0b1439.png)
+
 <svg width="1008" height="623" viewBox="0 0 1008 623" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <rect width="1008" height="623" fill="url(#pattern0)"/>
 <defs>
