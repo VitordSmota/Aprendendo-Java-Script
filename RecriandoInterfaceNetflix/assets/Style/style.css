@@ -1,103 +1,157 @@
-:root{ /**criando variáveis com  ":root{ --name : atributo; }"*/
-    --vermelho: #E50914;
-    --preta: #141414;
-    --branco: #AAA;
-    --navhover: #fff;
-    --logohover: #ff0410
-    
+:root {
+    /**criando variáveis com  ":root{ --name : atributo; }"*/
+    --vermelho          : #E50914;
+    --preta             : #141414;
+    --branco            : #AAA;
+    --navhover          : #fff;
+    --logohover         : #ff0410;
+    --roxo: rgb(109, 118, 241);
 }
+
 /* Globals elements*/
-*{
-    margin: 0; /** zerando todas as margens */
-    padding: 0; /* zerando todas as padding*/
-    box-sizing: border-box; /** mantém a caixa travada, não muda de tamanho independentemente do tamanho do item dentro dela */
+* {
+    margin              : 0;
+    /** zerando todas as margens */
+    padding             : 0;
+    /* zerando todas as padding*/
+    box-sizing          : border-box;
+    /** mantém a caixa travada, não muda de tamanho independentemente do tamanho do item dentro dela */
 }
- /* Base elements*/
+
+/* Base elements*/
 body {
-    background-color: var(--preta); /** fundo da página */
-    font-family: 'Times New Roman', Times, serif; /** fonte do texto */
-    color: white;
-  
+    background-color    : var(--preta);
+    /** fundo da página */
+    font-family: 'Arial', Helvetica, sans-serif;
+    
+    /** fonte do texto */
+    color               : white;
+
 }
 
 header .container {
-    display: flex; /**display flex deixa os itens em linha. */
-    flex-direction: row; /** vem padrão com display: flex, está aqui por semântica */
-    align-items: center; /** alinha os items para o centro da sua caixa */
-    justify-content: space-between; /*separa os elementos na horizontal*/
+    /**display flex deixa os itens em linha. */
+    display             : flex;
+    /** vem padrão com display: flex, está aqui por semântica */
+    flex-direction      : row;
+    /** alinha os items para o centro da sua caixa */
+    align-items         : center;
+    /*separa os elementos na horizontal*/
+    justify-content     : space-between;
 }
-header .logo{
-    margin-left: 5px; /*distância o logo da esquerda */
-    color: var(--vermelho); /** cor do texto */
-    font-family: 'Arial Black', times, serif;
-    font-size: 40px; /** largura do texto */
+
+header .logo {
+    margin-left         : 5px;
+    /*distância o logo da esquerda */
+    color               : var(--vermelho);
+    /** cor do texto */
+    font-family         : Arial, sans-serif;
+    font-size           : 40px;
+    /** largura do texto */
 }
-header .logo:hover{ 
-    color: var(--logohover);
+
+header .logo:hover {
+    color               : var(--logohover);
 }
 
 header nav a {
-    text-decoration: none; /** tira o sublinhado da linha */
-    color: var(--branco);
-    margin-right: 10px; /** margin à direita */
+    text-decoration     : none;
+    /** tira o sublinhado da linha */
+    color               : var(--branco);
+    margin-right        : 10px;
+    /** margin à direita */
 
 
 }
-header nav a:hover{
 
-    color: var(--navhover);
+header nav a:hover {
+
+    color               : var(--navhover);
 }
+
 /* main movie */
 .main-movie {
-   font-size: 18px; /* Tamanho do texto*/
-   background: linear-gradient(rgba(0, 0, 0, .50), rgba(0, 0, 0, .50)100%),
-   url('/assets/img/capaKimetsu.jpeg'); /*efeito de sombra na imagem para destacar o texto*/
-    width: 100%;
-   height: 500px;/* altura da imagem*/
-   background-size: cover; /* A imagem preenche toda a caixa com a imagem inteira*/
-   
-   display: flex; /*tornar caixas flexiveis*/
-   flex-direction: column; /*estando flexiveis, eu jogo ela em formato de coluna*/
-   justify-content: center;/* Conteúdo no centro da caixa*/
-   align-items: flex-start; /* os elementos começam da esquerda*/
-   
+    font-size           : 18px;
+    /* Tamanho do texto*/
+    background          : linear-gradient(rgba(0, 0, 0, .50), rgba(0, 0, 0, .50)100%),
+        url('/assets/img/capaKimetsu.jpeg');
+    /*efeito de sombra na imagem para destacar o texto*/
+    width               : 100%;
+    height              : 500px;
+    /* altura da imagem*/
+    background-size     : cover;
+    /* A imagem preenche toda a caixa com a imagem inteira*/
+
+    display             : flex;
+    /*tornar caixas flexiveis*/
+    flex-direction      : column;
+    /*estando flexiveis, eu jogo ela em formato de coluna*/
+    justify-content     : center;
+    /* Conteúdo no centro da caixa*/
+    align-items         : flex-start;
+    /* os elementos começam da esquerda*/
+
 
 }
+
 .main-movie .description {
-    margin-bottom: 40px; /* margem em baixo da descrição. Afasta o texto dos botões*/
+    margin-bottom       : 40px;
+    /* margem em baixo da descrição. Afasta o texto dos botões*/
 }
+
 .title {
-    margin-top: 30%;
-    font-size: 40px; /* Aumenta o tamanho do titulo*/ 
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-top          : 30%;
+    font-size           : 40px;
+    /* Aumenta o tamanho do titulo*/
+    font-family         : 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
 button {
-    background-color: rgba(0,0,0,.50); 
-    border: none; /* Sem borda*/ 
-    color: white;
-    padding: 15px 30px; /* 15px para top/bottom  30px para right/left*/
-    margin-right: 15px;
-    font-size: 12px;
-    cursor: pointer;/* o cursor do mouse muda mostrando que essa caixa é um botão*/
-    border-radius: 4px;
-    transition: .6s ease all; /* ajusta o tempo de uma animação para a outra */
+    background-color    : rgba(0, 0, 0, .50);
+    border              : none;
+    /* Sem borda*/
+    color               : white;
+    padding             : 15px 30px;
+    /* 15px para top/bottom  30px para right/left*/
+    margin-right        : 15px;
+    font-size           : 12px;
+    cursor              : pointer;
+    /* o cursor do mouse muda mostrando que essa caixa é um botão*/
+    border-radius       : 4px;
+    transition          : .6s ease all;
+    /* ajusta o tempo de uma animação para a outra */
 }
+
 .button:hover {
-    background-color:#ffffff;
-     color: rgba(0, 0, 0, .50);
+    background-color    : #ffffff;
+    color               : rgba(0, 0, 0, .50);
 }
+
 .button i {
-    margin-right: 8px;
+    margin-right        : 8px;
 }
-.container{
-    margin-left: 30px; 
-    margin-right: 10px
+
+.container {
+    margin-left         : 30px;
+    margin-right        : 10px
 }
-.main-movie .container{
-    width: 60%;
+
+.main-movie .container {
+    width               : 60%;
 }
-.box-movie{
-    height: 100%;
-    width: 100%;
-    display: block;
+
+.box-movie {
+    height              : 100%;
+    width               : 100%;
+    display             : block;
+}
+.carrosel {
+    margin-top : 5px;
+}
+footer{
+   padding: 4rem 0 2rem;
+    text-align : center;
+    opacity: 0.6;
+    
+
 }
