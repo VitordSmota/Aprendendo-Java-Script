@@ -5,7 +5,7 @@
     --branco            : #AAA;
     --navhover          : #fff;
     --logohover         : #ff0410;
-    --roxo: rgb(109, 118, 241);
+    --roxo              : rgb(109, 118, 241);
 }
 
 /* Globals elements*/
@@ -22,8 +22,8 @@
 body {
     background-color    : var(--preta);
     /** fundo da página */
-    font-family: 'Arial', Helvetica, sans-serif;
-    
+    font-family         : 'Arial', Helvetica, sans-serif;
+
     /** fonte do texto */
     color               : white;
 
@@ -74,10 +74,11 @@ header nav a:hover {
     font-size           : 18px;
     /* Tamanho do texto*/
     background          : linear-gradient(rgba(0, 0, 0, .50), rgba(0, 0, 0, .50)100%),
-        url('/assets/img/capaKimetsu.jpeg');
-    /*efeito de sombra na imagem para destacar o texto*/
-    width               : 100%;
-    height              : 500px;
+        url('/RecriandoInterfaceNetflix/assets/img/capaKimetsu.jpeg');
+    background          : 
+        /*efeito de sombra na imagem para destacar o texto*/
+        width           : 100%;
+        height          : 500px;
     /* altura da imagem*/
     background-size     : cover;
     /* A imagem preenche toda a caixa com a imagem inteira*/
@@ -145,13 +146,15 @@ button {
     width               : 100%;
     display             : block;
 }
+
 .carrosel {
-    margin-top : 5px;
+    margin-top          : 5px;
 }
-footer{
-   padding: 4rem 0 2rem;
-    text-align : center;
-    opacity: 0.6;
-    
+
+footer {
+    padding             : 4rem 0 2rem;
+    text-align          : center;
+    opacity             : 0.6;
+
 
 }
