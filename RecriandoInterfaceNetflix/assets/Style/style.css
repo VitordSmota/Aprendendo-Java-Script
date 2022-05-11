@@ -1,64 +1,64 @@
 :root {
     /**criando variáveis com  ":root{ --name : atributo; }"*/
-    --vermelho          : #E50914;
-    --preta             : #141414;
-    --branco            : #AAA;
-    --navhover          : #fff;
-    --logohover         : #ff0410;
-    --roxo              : rgb(109, 118, 241);
+    --vermelho: #E50914;
+    --preta: #141414;
+    --branco: #AAA;
+    --navhover: #fff;
+    --logohover: #ff0410;
+    --roxo: rgb(109, 118, 241);
 }
 
 /* Globals elements*/
 * {
-    margin              : 0;
+    margin: 0;
     /** zerando todas as margens */
-    padding             : 0;
+    padding: 0;
     /* zerando todas as padding*/
-    box-sizing          : border-box;
+    box-sizing: border-box;
     /** mantém a caixa travada, não muda de tamanho independentemente do tamanho do item dentro dela */
 }
 
 /* Base elements*/
 body {
-    background-color    : var(--preta);
+    background-color: var(--preta);
     /** fundo da página */
-    font-family         : 'Arial', Helvetica, sans-serif;
+    font-family: 'Arial', Helvetica, sans-serif;
 
     /** fonte do texto */
-    color               : white;
+    color: white;
 
 }
 
 header .container {
     /**display flex deixa os itens em linha. */
-    display             : flex;
+    display: flex;
     /** vem padrão com display: flex, está aqui por semântica */
-    flex-direction      : row;
+    flex-direction: row;
     /** alinha os items para o centro da sua caixa */
-    align-items         : center;
+    align-items: center;
     /*separa os elementos na horizontal*/
-    justify-content     : space-between;
+    justify-content: space-between;
 }
 
 header .logo {
-    margin-left         : 5px;
+    margin-left: 5px;
     /*distância o logo da esquerda */
-    color               : var(--vermelho);
+    color: var(--vermelho);
     /** cor do texto */
-    font-family         : Arial, sans-serif;
-    font-size           : 40px;
+    font-family: Arial, sans-serif;
+    font-size: 40px;
     /** largura do texto */
 }
 
 header .logo:hover {
-    color               : var(--logohover);
+    color: var(--logohover);
 }
 
 header nav a {
-    text-decoration     : none;
+    text-decoration: none;
     /** tira o sublinhado da linha */
-    color               : var(--branco);
-    margin-right        : 10px;
+    color: var(--branco);
+    margin-right: 10px;
     /** margin à direita */
 
 
@@ -66,95 +66,94 @@ header nav a {
 
 header nav a:hover {
 
-    color               : var(--navhover);
+    color: var(--navhover);
 }
 
 /* main movie */
 .main-movie {
-    font-size           : 18px;
+    font-size: 18px;
     /* Tamanho do texto*/
-    background          : linear-gradient(rgba(0, 0, 0, .50), rgba(0, 0, 0, .50)100%),
-        url('/RecriandoInterfaceNetflix/assets/img/capaKimetsu.jpeg');
-    background          : 
+    background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)100%), url('/assets/img/capaKimetsu.jpeg');
+    background:
         /*efeito de sombra na imagem para destacar o texto*/
-        width           : 100%;
-        height          : 500px;
+        width: 100%;
+    height: 500px;
     /* altura da imagem*/
-    background-size     : cover;
+    background-size: cover;
     /* A imagem preenche toda a caixa com a imagem inteira*/
 
-    display             : flex;
+    display: flex;
     /*tornar caixas flexiveis*/
-    flex-direction      : column;
+    flex-direction: column;
     /*estando flexiveis, eu jogo ela em formato de coluna*/
-    justify-content     : center;
+    justify-content: center;
     /* Conteúdo no centro da caixa*/
-    align-items         : flex-start;
+    align-items: flex-start;
     /* os elementos começam da esquerda*/
 
 
 }
 
 .main-movie .description {
-    margin-bottom       : 40px;
+    margin-bottom: 40px;
     /* margem em baixo da descrição. Afasta o texto dos botões*/
 }
 
 .title {
-    margin-top          : 30%;
-    font-size           : 40px;
+    margin-top: 30%;
+    font-size: 40px;
     /* Aumenta o tamanho do titulo*/
-    font-family         : 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 button {
-    background-color    : rgba(0, 0, 0, .50);
-    border              : none;
+    background-color: rgba(0, 0, 0, .50);
+    border: none;
     /* Sem borda*/
-    color               : white;
-    padding             : 15px 30px;
+    color: white;
+    padding: 15px 30px;
     /* 15px para top/bottom  30px para right/left*/
-    margin-right        : 15px;
-    font-size           : 12px;
-    cursor              : pointer;
+    margin-right: 15px;
+    font-size: 12px;
+    cursor: pointer;
     /* o cursor do mouse muda mostrando que essa caixa é um botão*/
-    border-radius       : 4px;
-    transition          : .6s ease all;
+    border-radius: 4px;
+    transition: .6s ease all;
     /* ajusta o tempo de uma animação para a outra */
 }
 
 .button:hover {
-    background-color    : #ffffff;
-    color               : rgba(0, 0, 0, .50);
+    background-color: #ffffff;
+    color: rgba(0, 0, 0, .50);
 }
 
 .button i {
-    margin-right        : 8px;
+    margin-right: 8px;
 }
 
 .container {
-    margin-left         : 30px;
-    margin-right        : 10px
+    margin-left: 30px;
+    margin-right: 10px
 }
 
 .main-movie .container {
-    width               : 60%;
+    width: 60%;
 }
 
 .box-movie {
-    height              : 100%;
-    width               : 100%;
-    display             : block;
+    height: 100%;
+    width: 100%;
+    display: block;
 }
 
 .carrosel {
-    margin-top          : 5px;
+    margin-top: 5px;
 }
 
 footer {
-    padding             : 4rem 0 2rem;
-    text-align          : center;
-    opacity             : 0.6;
+    padding: 4rem 0 2rem;
+    text-align: center;
+    opacity: 0.6;
 
 
 }
