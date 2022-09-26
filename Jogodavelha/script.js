@@ -276,7 +276,7 @@ function rodada2() {
         }
 
     }
-
+    
     box1.onclick = () => {
         debugger;
         box1.style.color = "#000000"
@@ -482,8 +482,7 @@ function VerificaSeGanhou1() {
         modalVencedorX();
 
     }
-
-
+    
     else if (
         box3.value === 'X' &&
         box5.value === 'X' &&
@@ -497,6 +496,35 @@ function VerificaSeGanhou1() {
         debugger;
         modalVencedorX();
     }
+    else if (box1.value === "X" || box1.value === "O") {
+        debugger;
+        if (box2.value === "X" || box2.value === "O") {
+            debugger;
+            if (box3.value === "X" || box3.value === "O") {
+                debugger;
+                if (box4.value === "X" || box4.value === "O") {
+                    debugger;
+                    if (box5.value === "X" || box5.value === "O") {
+                        debugger;
+                        if (box6.value === "X" || box6.value === "O") {
+                            debugger;
+                            if (box7.value === "X" || box7.value === "O") {
+                                debugger;
+                                if (box8.value === "X" || box8.value === "O") {
+                                    debugger;
+                                    if (box9.value === "X" || box9.value === "O") {
+                                        modalEmpate();
+                                    } else rodada2();
+                                } else rodada2();
+                            } else rodada2();
+                        } else rodada2();
+                    } else rodada2();
+                } else rodada2();
+            } else rodada2();
+        } else rodada2();
+
+    }
+           
     else {
 
         rodada2();
@@ -639,7 +667,35 @@ function VerificaSeGanhou2() {
         debugger;
         modalVencedorO();
 
-    } else {
+    } else if (box1.value === "X" || box1.value === "O") {
+        debugger;
+        if (box2.value === "X" || box2.value === "O") {
+            debugger;
+            if (box3.value === "X" || box3.value === "O") {
+                debugger;
+                if (box4.value === "X" || box4.value === "O") {
+                    debugger;
+                    if (box5.value === "X" || box5.value === "O") {
+                        debugger;
+                        if (box6.value === "X" || box6.value === "O") {
+                            debugger;
+                            if (box7.value === "X" || box7.value === "O") {
+                                debugger;
+                                if (box8.value === "X" || box8.value === "O") {
+                                    debugger;
+                                    if (box9.value === "X" || box9.value === "O") {
+                                        modalEmpate();
+                                    } else rodada1();
+                                } else rodada1();
+                            } else rodada1();
+                        } else rodada1();
+                    } else rodada1();
+                } else rodada1();
+            } else rodada1();
+        } else rodada1();
+
+    }
+    else {
         console.log('Passou!')
         rodada1();
 
@@ -718,6 +774,36 @@ function modalVencedorO() {
     })
 
 }
+function modalEmpate() {
+    debugger;
+
+
+    let vencedor = document.getElementById('vencedor')
+    vencedor.innerHTML = "Empate <br> Deseja  continuar?"
+
+
+
+    Modal.winOpen();
+
+
+    debugger;
+    CONTINUAR.addEventListener('click', () => {
+
+        limpando();
+        jogadorAleatorio();
+    })
+
+
+
+    PARAR.addEventListener('click', () => {
+
+        debugger;
+        document.location.reload(true);
+
+
+    })
+
+}
 
 function limpando() {
     debugger;
@@ -751,14 +837,11 @@ function jogadorAleatorio() {
         debugger;
         rodada2();
     }
-
 }
 
-
-
-/**function HoverJS() {
+   /** function HoverJS() {
     debugger;
-    if (box1.style.color == "#000000") {
+        if (box1.style.color == "#0d95ca") {
         debugger;
         box1.onmouseover = () => { box1.style.color = "rgba(248, 248, 248, 0.7)" }
         box1.onmouseout = () => { box1.style.color = "#0d95ca" }
@@ -803,4 +886,4 @@ function jogadorAleatorio() {
     }
 
 
-} */
+}  */

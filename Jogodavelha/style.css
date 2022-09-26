@@ -8,10 +8,11 @@
 body{
     margin                  : 1rem;
     padding                 : 1rem;
-    background-color        :white;
+    background-color        :#0d95ca;
     margin                  : 1rem;
     padding                 : 1rem;
 }
+
 .header{
 
 background-color            : #bdd3b6;
@@ -70,10 +71,10 @@ background-color            : #bdd3b6;
     color : #0d95ca;
     
    }
-/*.box:hover{
+.box:hover{
    
     color:rgba(248, 248, 248, 0.7);
-}*/
+}
 .box-r{
     border-right: 3px solid white;
     border-left: 3px solid white;
@@ -153,6 +154,7 @@ button:hover{
     background-color        : rgba(0, 0, 0, 0.7);
     position                : fixed;
     top                     : 0;
+    left                    : 0;
     display                     : flex;
     align-items : center;
     justify-content : center;
@@ -172,6 +174,7 @@ button:hover{
     display:grid;
 }
 section{
+    margin-top: 8%;
     display: flex;
     align-items: center;
     justify-content: center;
