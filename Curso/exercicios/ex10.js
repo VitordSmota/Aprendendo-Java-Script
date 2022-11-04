@@ -1,6 +1,7 @@
 const divisivelpor3 = valor => { 
 
     const stringdoValor = valor.toString()
+
     const ArrdoValor = stringdoValor.split('')
     let soma = 0
     for (i in ArrdoValor) {
@@ -17,5 +18,9 @@ const divisivelpor3 = valor => {
     console.log(informando)
 }
 
-divisivelpor3()
+divisivelpor3(2)
+divisivelpor3(3)
+divisivelpor3(6)
+divisivelpor3(10)
+divisivelpor3(10323132312321 )
 
