@@ -15,7 +15,7 @@ const handleFocusOut = ({ target }) => {
 }
 const handleChange = () => {
     const [username, password] = inputs;
-    /**A const acima funciona da mesma maneira caso eu realiaze a seguinte codificação
+    /**A const acima funciona da mesma maneira caso eu realize a seguinte codificação
         const username = inputs[0];
         const password = inputs[1];
     */
