@@ -1,23 +1,33 @@
-const pai = { nome: 'Pedro', corCabelo: 'preto' }
+function MeuObjeto() { }
+console.log(MeuObjeto.prototype)
 
-const filha1 = Object.create(pai)
+const obj1 = new MeuObjeto
+const obj2 = new MeuObjeto
 
-filha1.nome = 'Ana'
-console.log(filha1.corCabelo)
+console.log(obj1.__proto__ === obj2.__proto__)
+console.log(MeuObjeto.prototype === obj1.__proto__)
 
-const filha2 = Object.create(pai, {
-    nome: {value: 'Bia', writable: false, enumerable: true}
-})
-
-console.log(filha2.nome)
-filha2.nome - 'Carla'
-console.log(`${filha2.nome} tem cabelo ${filha2.corCabelo}`)
-
-console.log(Object.keys(filha1))
-console.log(Object.keys(filha2))
-
-for (let key in filha2) {
-    
-    filha2.hasOwnProperty(key) ?
-        console.log(key): console.log(`Por Herança: ${key}`)
+MeuObjeto.prototype.nome = 'Anônimo'
+MeuObjeto.prototype.falar = function () {
+    console.log(`Bom dia! Meu nome é ${this.nome} !`)
 }
+
+obj1.falar()
+obj2.nome = 'Rafael'
+obj2.falar()
+
+const obj3 = {}
+
+obj3.__proto__ = MeuObjeto.prototype
+
+obj3.nome = 'Obj3'
+obj3.falar()
+
+
+// resumindo a loucura...
+
+console.log((new MeuObjeto).__proto__ === MeuObjeto.prototype)
+console.log(MeuObjeto.__proto__ === Function.prototype)
+console.log(Function.prototype.__proto__ === Object.prototype)
+
+console.log(Object.prototype.__proto__ === null)
