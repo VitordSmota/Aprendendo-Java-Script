@@ -44,8 +44,7 @@ background-color            : #bdd3b6;
     text-align              : center;
     display                 : grid;
     grid-template-areas     : 
-    "hbox hbox hbox"
-   ;
+    "hbox hbox hbox";
     visibility: visible;
 }
 .hidden{
@@ -220,7 +219,7 @@ color:#eae1e8
     background-color        : rgba(0, 0, 0, 0.7);
     position                : fixed;
     top                     : 0;
-    left :0
+    left :0;
     display                     : flex;
     align-items : center;
     justify-content : center;
