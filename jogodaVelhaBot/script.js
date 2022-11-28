@@ -15,7 +15,8 @@ let controlador = true;
 
 let playerScore = document.getElementById("playerScore");
 let botScore = document.getElementById("botScore");
-
+let contBot = 0
+let contPlayer = 0
 
 
 const arrWinning = [
@@ -58,13 +59,16 @@ const modalDaVitoria = () => {
     debugger;
     whoWin.innerHTML = `   Vitória!! Rumo ao Hexa!`;
     document.querySelector(".winningMessage").classList.add("active");
+    contPlayer++
+    playerScore.innerHTML = `${contPlayer}`
     resetbtn();
   } else if (verificaVitoria("O")) {
-   
     debugger;
     whoWin.innerHTML = `Vish, não foi dessa vez!`;
     debugger;
     document.querySelector(".winningMessage").classList.add("active");
+    contBot++
+    botScore.innerHTML = `${contBot}`;
     resetbtn();
   }
   
