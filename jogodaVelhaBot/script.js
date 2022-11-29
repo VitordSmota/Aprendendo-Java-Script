@@ -10,6 +10,7 @@ let b5 = document.getElementById("b5");
 let b6 = document.getElementById("b6");
 let b7 = document.getElementById("b7");
 let b8 = document.getElementById("b8");
+let vez = document.getElementById("vez");
 
 let controlador = true;
 let controladorModal = true;
@@ -64,6 +65,9 @@ function storage() {
 function random(){
   if (Math.floor(Math.random() * 10) % 2 == 0) {
     whereIplay();
+  }
+  else {
+    vez.innerHTML = "Sua Vez"
   }
 };
 const arrWinning = [
@@ -1358,6 +1362,7 @@ function whereIplay() {
 
 
   controlador = true
+  vez.innerHTML = "Sua Vez";
 }
 
 
@@ -1375,8 +1380,8 @@ const handleClick = e => {
     whereIplay();
     modalDaVitoria();
     verificaEmpate();
-  }, 740);
-
+  }, 800);
+    vez.innerHTML = "";
   }
   
   

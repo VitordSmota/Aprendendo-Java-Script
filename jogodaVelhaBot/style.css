@@ -17,6 +17,7 @@ body {
     width: 100%;
     height: 100%;
     display: flex;
+    position: relative;
    
 }
 
@@ -181,3 +182,16 @@ table{
     
 }
 
+.vez{
+    position: absolute;
+    right: 41%;
+    border: none;
+}
+.resetscore{
+    color: white;
+    background-color: #fd9319 ;
+    border: 1px solid #2a5580 ;
+    border-radius: 10px 20px 20px 10px ;
+    position: absolute;
+   
+}
