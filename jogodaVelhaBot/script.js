@@ -12,13 +12,60 @@ let b7 = document.getElementById("b7");
 let b8 = document.getElementById("b8");
 
 let controlador = true;
+let controladorModal = true;
 
 let playerScore = document.getElementById("playerScore");
 let botScore = document.getElementById("botScore");
-let contBot = 0
-let contPlayer = 0
 
 
+function storagePlayer () {
+  debugger;
+ 
+    let storagePlayer = localStorage.getItem("player");
+    let storageBot = localStorage.getItem("bot");
+
+    let totStoragePlayer = 1 + parseInt(storagePlayer)
+    let totStorageBot = parseInt(storageBot);
+  
+    localStorage.setItem("player", JSON.stringify(totStoragePlayer));
+   
+ 
+      botScore.innerHTML = `${totStorageBot}`;
+      playerScore.innerHTML = `${totStoragePlayer}`
+
+  
+
+}
+function storageBot() {
+  debugger;
+  let storagePlayer = localStorage.getItem("player");
+  let storageBot = localStorage.getItem("bot");
+
+  let totStoragePlayer = parseInt(storagePlayer);
+  let totStorageBot = 1 + parseInt(storageBot);
+
+  
+  localStorage.setItem("bot", JSON.stringify(totStorageBot));
+
+  botScore.innerHTML = `${totStorageBot}`;
+  playerScore.innerHTML = `${totStoragePlayer}`;
+}
+
+function storage() { 
+
+  let storagePlayer = localStorage.getItem("player");
+  let storageBot = localStorage.getItem("bot");
+  let totStoragePlayer = parseInt(storagePlayer);
+  let totStorageBot =  parseInt(storageBot);
+  botScore.innerHTML = `${totStorageBot}`;
+  playerScore.innerHTML = `${totStoragePlayer}`;
+}
+
+function random(){
+  if (Math.floor(Math.random() * 10) % 2 == 0) {
+    whereIplay();
+  }
+};
 const arrWinning = [
   [0, 1, 2],
   [3, 4, 5],
@@ -37,6 +84,9 @@ const resetbtn = () => {
       box.innerHTML = ''
       
     }
+
+      controladorModal = true;
+      random();
       document.querySelector(".winningMessage").classList.remove("active");
   })
 }
@@ -56,54 +106,32 @@ const modalDaVitoria = () => {
    debugger;
  
   if (verificaVitoria("X")) {
+    controladorModal = false
     debugger;
     whoWin.innerHTML = `   Vitória!! Rumo ao Hexa!`;
     document.querySelector(".winningMessage").classList.add("active");
-    contPlayer++
-    playerScore.innerHTML = `${contPlayer}`
+    debugger;
+     storagePlayer();
     resetbtn();
+   
   } else if (verificaVitoria("O")) {
+     controladorModal = false;
     debugger;
     whoWin.innerHTML = `Vish, não foi dessa vez!`;
     debugger;
     document.querySelector(".winningMessage").classList.add("active");
-    contBot++
-    botScore.innerHTML = `${contBot}`;
+    storageBot();
     resetbtn();
+   
   }
   
   
 };
 
-
-const jogadasEspecificas = () => {
-  if (b0.value == undefined && b2.value == undefined && b6.value == undefined && controlador) {
-     controlador = false;
-     switch (randomMaxMin(3,1)){
-       case 1:
-         
-         b6.value = "O";
-         b6.innerHTML = "O";
-         break;
-       case 2:
-         b2.value = "O";
-         b2.innerHTML = "O";
-         break;
-     }
-  }
-  if ( b0.value == undefined &&
-      ((b2.value == "O" && b6.value == undefined) ||
-      (b2.value == undefined && b6.value == "O")) &&
-      controlador) {
-    controlador = false;
-  }
-
-}
-
-
 const verificaDefesa = () => {
    debugger;
   // 1.1
+  
   if (
     b0.value == "X" &&
     b4.value == "X" &&
@@ -361,7 +389,6 @@ const verificaDefesa = () => {
     controlador = false;
   }
 };
-//const jogadasEspeciais = () => {};
 const verificaAtaque = () => {
   // 1.1
    debugger;
@@ -636,12 +663,15 @@ const verificaEmpate = () => {
     b5.value != undefined &&
     b6.value != undefined &&
     b7.value != undefined &&
-    b8.value != undefined
-  ){
+    b8.value != undefined &&
+    controladorModal
+  ) {
+    
     whoWin.innerHTML = `Coé, impatou menô!!`;
     debugger;
     document.querySelector(".winningMessage").classList.add("active");
     resetbtn();
+    
   }
 };
 
@@ -656,11 +686,11 @@ const JogadasAleatorias = () => {
     b2.value == undefined &&
     b6.value == undefined &&
     b8.value == undefined &&
-    b4.value == undefined &&
+    
     controlador
   ) {
     debugger;
-    switch (randomMaxMin(8, 1)) {
+    switch (randomMaxMin(5, 1)) {
       case 1:
         debugger;
         controlador = false;
@@ -688,14 +718,7 @@ const JogadasAleatorias = () => {
         b8.value = "O";
         b8.innerHTML = "O";
         break;
-      case 5:
-      case 6:
-      case 7:
-        debugger;
-        controlador = false;
-        b4.value = "O";
-        b4.innerHTML = "O";
-        break;
+      
       default:
         return `Erro whereIplay `;
     }
@@ -1284,7 +1307,7 @@ const JogadasAleatorias = () => {
 
 }
 
-const whereIplay = () => {
+function whereIplay() {
 
   JogadasAleatorias();
   if (b1.value == undefined && controlador) {
@@ -1338,26 +1361,31 @@ const whereIplay = () => {
 }
 
 
-const random = () => { 
-  if (Math.floor(Math.random() * 10) % 2 == 0) { 
-    whereIplay()
-  }
-}
+
 
 random();
 const handleClick = e => { 
   const box = e.target;
+
+  if(box.value != 'O'){
+
   box.innerHTML = "X";
   box.value = "X";
   setTimeout(() => {
     whereIplay();
     modalDaVitoria();
     verificaEmpate();
-  }, 600);
+  }, 740);
+
+  }
+  
+  
+
   
 };
 for (const box of boxElements) {
   box.addEventListener("click", handleClick,);
   
 }
+ storage();
 
