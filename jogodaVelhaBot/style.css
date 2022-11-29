@@ -133,7 +133,37 @@ table{
 
 
 
-@media (max-width: 968px){
+@media  only screen and (min-width: 320px) and (max-width: 530px ){
+    .img{
+        display:none;
+    }
+    .container{
+        margin-right: 50px;
+        margin-left: 20px;
+         background-image: url(./download.jfif);
+         background-size: cover;
+         max-width: 70vw;
+         max-height: 90vh;
+        width: 100%;
+        height: auto;         
+
+    }
+    .main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin: 14px;
+    padding: 0;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: space-evenly;
+    align-items: baseline;
+}
+    
+    
+}
+@media (min-width: 531px) and (max-width: 1000px){
     .img{
         display:none;
     }
