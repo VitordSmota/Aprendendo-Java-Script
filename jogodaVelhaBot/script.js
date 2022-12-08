@@ -690,11 +690,11 @@ const JogadasAleatorias = () => {
     b2.value == undefined &&
     b6.value == undefined &&
     b8.value == undefined &&
-    
+    b4.value == undefined&&
     controlador
   ) {
     debugger;
-    switch (randomMaxMin(5, 1)) {
+    switch (randomMaxMin(6, 1)) {
       case 1:
         debugger;
         controlador = false;
@@ -721,6 +721,11 @@ const JogadasAleatorias = () => {
         controlador = false;
         b8.value = "O";
         b8.innerHTML = "O";
+        break;
+      case 5: 
+        controlador = false;
+        b4.value = "O";
+        b4.innerHTML = "O";
         break;
       
       default:

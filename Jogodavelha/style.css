@@ -62,10 +62,10 @@ background-color            : #bdd3b6;
 .box{
     
     background              : #0d95ca;
-    height                  : 15vw;
-    width                   : 15vw;
+    height                  : 10vw;
+    width                   : 10vw;
     text-align: center;
-    font-size: clamp(1rem, 13vw, 70rem); 
+    font-size: clamp(1rem, 9vw, 70rem); 
     font-family: 'Lato', sans-serif !important;
     color : #0d95ca;
     
